@@ -4,5 +4,6 @@ docker run -it \
 	--privileged \
 	--env="DISPLAY=unix:0.0" \
 	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-	baxter_sim
+	--mount type=bind,source="$(pwd)"/mnt_me,target=/root/ws_host \
+	baxter_nvidia
 xhost -local:root
