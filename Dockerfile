@@ -9,3 +9,4 @@ RUN sh /tmp/NVIDIA-DRIVER.run --ui=none --no-kernel-module --install-libglvnd
 RUN rm /tmp/NVIDIA-DRIVER.run
 
 ADD baxter.sh /root/ws_baxter/baxter.sh
+ENTRYPOINT ["/root/ws_baxter/baxter.sh"]
